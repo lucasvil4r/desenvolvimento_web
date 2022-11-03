@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de alunos</title>
+    <link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body>
+    <!-- Isso é um comentário em HTML
+    Ele pode ter várias linhas -->
+    {# Isso é um comentário do Flask.
+        Ele também pode ter várias linhas #}
+    <h1>Lista de alunos da disciplina {{ disc }}</h1>
+    <table>
+        <tr>
+            <th>Matricula</th><th>Nome</th><th>Nota</th><th>Situação</th>
+        </tr>
+        {% for objeto in lista_alunos %}
+            <tr>
+                <td>{{ objeto.get_matricula() }}</td>
+                <td>{{ objeto.get_nome() }}</td>
+                <td>{{ objeto.get_nota() }}</td>
+                {% if objeto.get_nota() >= 6 %}
+                    <td class="aprovado">Aprovado</td>
+                {% else %}
+                    <td class="reprovado">Reprovado</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
