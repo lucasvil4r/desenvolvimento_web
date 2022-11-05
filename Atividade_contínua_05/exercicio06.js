@@ -1,0 +1,1 @@
+//Na linguagem JavaScript não é necessário definir explicitamente o tipo da variável criada. Esse tipo é definido automaticamente no momento em que um valor é atribuído à variável

@@ -1,0 +1,13 @@
+let pessoas = [];
+let pes1 = [];
+pes1["nome"] = "João";
+pes1.cidade = "São Paulo";
+pessoas.push(pes1);
+let pes2 = {};
+pes2.nome = "José";
+pes2.estado = "São Paulo";
+pessoas.push(pes2);
+console.log(pessoas[0].nome);
+console.log(pessoas[0]["cidade"]);
+console.log(pessoas[1]["nome"]);
+console.log(pessoas[1].cidade);
